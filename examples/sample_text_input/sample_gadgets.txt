@@ -1,0 +1,5 @@
+"pop rax; ret" : 0x0000000000035a1b
+"pop rbx; ret" : 0x000000000001537c
+"pop rcx; ret" : 0x0000000000025ecb
+"mov rax, qword ptr [rax]; ret" : 0x000000000002dc62
+"mov qword ptr [rdi], rax; ret" : 0x000000000005b1bb

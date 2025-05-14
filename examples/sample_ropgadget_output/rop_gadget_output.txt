@@ -1,0 +1,69 @@
+Gadgets information
+============================================================
+0x000000000040113e : add al, ch ; ret 0xffff
+0x000000000040107b : add bh, bh ; loopne 0x4010e5 ; nop ; ret
+0x000000000040113c : add byte ptr [rax], al ; add al, ch ; ret 0xffff
+0x000000000040104c : add byte ptr [rax], al ; add byte ptr [rax], al ; endbr64 ; ret
+0x000000000040114f : add byte ptr [rax], al ; add byte ptr [rax], al ; pop rbp ; ret
+0x00000000004010ea : add byte ptr [rax], al ; add dword ptr [rbp - 0x3d], ebx ; nop ; ret
+0x000000000040104e : add byte ptr [rax], al ; endbr64 ; ret
+0x0000000000401151 : add byte ptr [rax], al ; pop rbp ; ret
+0x000000000040100d : add byte ptr [rax], al ; test rax, rax ; je 0x401016 ; call rax
+0x00000000004010eb : add byte ptr [rcx], al ; pop rbp ; ret
+0x000000000040107a : add dil, dil ; loopne 0x4010e5 ; nop ; ret
+0x00000000004010ec : add dword ptr [rbp - 0x3d], ebx ; nop ; ret
+0x00000000004010e7 : add eax, 0x2f3b ; add dword ptr [rbp - 0x3d], ebx ; nop ; ret
+0x0000000000401017 : add esp, 8 ; ret
+0x0000000000401016 : add rsp, 8 ; ret
+0x0000000000401014 : call rax
+0x0000000000401103 : cli ; jmp 0x401090
+0x0000000000401116 : cli ; push rbp ; mov rbp, rsp ; mov rdi, rax ; ret
+0x0000000000401109 : cli ; push rbp ; mov rbp, rsp ; pop rax ; ret
+0x0000000000401053 : cli ; ret
+0x000000000040115b : cli ; sub rsp, 8 ; add rsp, 8 ; ret
+0x00000000004010e8 : cmp ebp, dword ptr [rdi] ; add byte ptr [rax], al ; add dword ptr [rbp - 0x3d], ebx ; nop ; ret
+0x0000000000401100 : endbr64 ; jmp 0x401090
+0x0000000000401106 : endbr64 ; push rbp ; mov rbp, rsp ; pop rax ; ret
+0x0000000000401050 : endbr64 ; ret
+0x000000000040111a : in eax, 0x48 ; mov edi, eax ; ret
+0x000000000040110d : in eax, 0x58 ; ret
+0x0000000000401012 : je 0x401016 ; call rax
+0x0000000000401075 : je 0x401080 ; mov edi, 0x404028 ; jmp rax
+0x00000000004010b7 : je 0x4010c0 ; mov edi, 0x404028 ; jmp rax
+0x0000000000401104 : jmp 0x401090
+0x000000000040100b : jmp 0x4840103f
+0x000000000040107c : jmp rax
+0x000000000040107d : loopne 0x4010e5 ; nop ; ret
+0x00000000004010e6 : mov byte ptr [rip + 0x2f3b], 1 ; pop rbp ; ret
+0x000000000040114e : mov eax, 0 ; pop rbp ; ret
+0x0000000000401119 : mov ebp, esp ; mov rdi, rax ; ret
+0x000000000040110c : mov ebp, esp ; pop rax ; ret
+0x0000000000401077 : mov edi, 0x404028 ; jmp rax
+0x000000000040111c : mov edi, eax ; ret
+0x0000000000401118 : mov rbp, rsp ; mov rdi, rax ; ret
+0x000000000040110b : mov rbp, rsp ; pop rax ; ret
+0x000000000040111b : mov rdi, rax ; ret
+0x0000000000401110 : nop ; pop rbp ; ret
+0x000000000040107f : nop ; ret
+0x00000000004010fc : nop dword ptr [rax] ; endbr64 ; jmp 0x401090
+0x0000000000401076 : or dword ptr [rdi + 0x404028], edi ; jmp rax
+0x000000000040110e : pop rax ; ret
+0x00000000004010ed : pop rbp ; ret
+0x0000000000401117 : push rbp ; mov rbp, rsp ; mov rdi, rax ; ret
+0x000000000040110a : push rbp ; mov rbp, rsp ; pop rax ; ret
+0x000000000040101a : ret
+0x0000000000401140 : ret 0xffff
+0x0000000000401011 : sal byte ptr [rdx + rax - 1], 0xd0 ; add rsp, 8 ; ret
+0x0000000000401078 : sub byte ptr [rax + 0x40], al ; add bh, bh ; loopne 0x4010e5 ; nop ; ret
+0x000000000040115d : sub esp, 8 ; add rsp, 8 ; ret
+0x000000000040115c : sub rsp, 8 ; add rsp, 8 ; ret
+0x0000000000401010 : test eax, eax ; je 0x401016 ; call rax
+0x0000000000401073 : test eax, eax ; je 0x401080 ; mov edi, 0x404028 ; jmp rax
+0x00000000004010b5 : test eax, eax ; je 0x4010c0 ; mov edi, 0x404028 ; jmp rax
+0x000000000040100f : test rax, rax ; je 0x401016 ; call rax
+Unique gadgets found: 61
+ROP chain generation
+===========================================================
+- Step 1 -- Write-what-where gadgets
+	[-] Can't find the 'mov qword ptr [r64], r64' gadget
+
