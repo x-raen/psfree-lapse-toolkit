@@ -5,7 +5,7 @@
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 <p align="center">
-  <img src="psfree_lapse_toolkit_logo" alt="PSFree Lapse Toolkit Logo" width="500"/>
+  <img src="psfree_lapse_toolkit_logo.png" alt="PSFree Lapse Toolkit Logo" width="500"/>
 </p>
 
 > This toolkit is a sophisticated suite of tools designed to streamline and automate critical aspects of exploit development, particularly focusing on the generation and management of ROP/JOP gadget maps for projects like PSFree Lapse. My vision for this project is to provide a robust, extensible, and highly efficient framework that empowers developers by abstracting away the tedious and error-prone tasks, allowing them to focus on the core logic and innovation of their exploits.
